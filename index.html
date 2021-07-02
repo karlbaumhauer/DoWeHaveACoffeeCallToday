@@ -9,9 +9,9 @@
   <script type="text/javascript">
     function changeText() {
       setTimeout(() => {
-        const answers = [ 'Nope...', 'Yep...', 'How many coffees did you have today...?'];
-        const sublines = ['Go back to work', 'Stop working, get coffee and start the call (IN THE CHANNEL!!!! @Eddi, not the chat...)', 'Ahhh... fuck it... lets do it!']
-        let random = Math.floor(Math.random() * 3)
+        const answers = [ 'Nope...', 'Yep...', 'How many coffees did you have today...?', 'Yeah, baby!! Yeah!'];
+        const sublines = ['Go back to work', 'Stop working, get coffee and start the call (IN THE CHANNEL!!!! @Eddi, not the chat...)', 'Ahhh... fuck it... lets do it!', 'Groovy ;-)']
+        let random = Math.floor(Math.random() * 4)
         document.querySelector('.answer').innerHTML = answers[random];
         setTimeout(() => { document.querySelector('.subline').innerHTML = sublines[random];}, 2000);
       }, 2000);
