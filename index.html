@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Do we have a coffee call today?</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="js" href="index.js">
+  <script type="text/javascript">
+    function changeText() {
+      setTimeout(() => {
+        console.log('hello');
+        const answers = [ 'Nope...', 'Yep...', 'How many coffees did you have today...?'];
+        const sublines = ['Go back to work', 'Stop working, get coffee and start the call (IN THE CHANNEL!!!! @Eddi, not the chat...)', 'Ahhh... fuck it... lets do it!']
+        let random = Math.floor(Math.random() * 3)
+        document.querySelector('.answer').innerHTML = answers[random];
+        setTimeout(() => { document.querySelector('.subline').innerHTML = sublines[random];}, 3000);
+      }, 3000);
+    };
+  </script>
+</head>
+<body onload="changeText()">
+  <h2 class="answer">Do we have a coffee call today?</h2>
+  <h3 class="subline"></h3>
+</body>
+</html>
